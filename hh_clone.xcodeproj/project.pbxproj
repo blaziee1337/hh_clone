@@ -130,7 +130,7 @@
 		658A3F532BBAC523002056CB /* hh_clone */ = {
 			isa = PBXGroup;
 			children = (
-				659AFEFA2BD86A08005793A7 /* CoreData */,
+				659AFEFA2BD86A08005793A7 /* Core Data */,
 				659AFEF62BD7AFEF005793A7 /* UserDefaults */,
 				658A3F702BBC7136002056CB /* Coordinators */,
 				658A3F6A2BBB5671002056CB /* Data */,
@@ -262,12 +262,12 @@
 			path = UserDefaults;
 			sourceTree = "<group>";
 		};
-		659AFEFA2BD86A08005793A7 /* CoreData */ = {
+		659AFEFA2BD86A08005793A7 /* Core Data */ = {
 			isa = PBXGroup;
 			children = (
 				653639C12BC30C940042D33D /* FavouriteVacancy.xcdatamodeld */,
 			);
-			path = CoreData;
+			path = "Core Data";
 			sourceTree = "<group>";
 		};
 		65F292C22BC562F20002FF06 /* SearchViewController */ = {
