@@ -100,6 +100,7 @@ final class EmailInputView: UIView {
         super.init(frame: frame)
         setupUI()
         setupConstraints()
+        setupButtonActions()
     }
     
     required init?(coder: NSCoder) {
