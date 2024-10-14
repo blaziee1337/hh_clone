@@ -11,6 +11,14 @@
 		656914302CA5E7F800B603A7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6569142F2CA5E7F800B603A7 /* SceneDelegate.swift */; };
 		656914372CA5E7FA00B603A7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 656914362CA5E7FA00B603A7 /* Assets.xcassets */; };
 		6569143A2CA5E7FA00B603A7 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 656914392CA5E7FA00B603A7 /* Base */; };
+		656914452CA6991000B603A7 /* LogInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 656914442CA6991000B603A7 /* LogInViewModel.swift */; };
+		656914472CA6995100B603A7 /* LogInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 656914462CA6995100B603A7 /* LogInView.swift */; };
+		6569144B2CA6998700B603A7 /* EmailInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6569144A2CA6998700B603A7 /* EmailInputView.swift */; };
+		6569144E2CA69B0800B603A7 /* Extension + UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6569144D2CA69B0800B603A7 /* Extension + UIColor.swift */; };
+		656914502CA6A65D00B603A7 /* FindEmployeeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6569144F2CA6A65D00B603A7 /* FindEmployeeView.swift */; };
+		656914542CA7040000B603A7 /* ConformationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 656914532CA7040000B603A7 /* ConformationViewModel.swift */; };
+		656914562CA704B600B603A7 /* ConformationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 656914552CA704B600B603A7 /* ConformationView.swift */; };
+		656914592CBD520100B603A7 /* ConformationTF.swift in Sources */ = {isa = PBXBuildFile; fileRef = 656914582CBD520100B603A7 /* ConformationTF.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +28,14 @@
 		656914362CA5E7FA00B603A7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		656914392CA5E7FA00B603A7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6569143B2CA5E7FA00B603A7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		656914442CA6991000B603A7 /* LogInViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewModel.swift; sourceTree = "<group>"; };
+		656914462CA6995100B603A7 /* LogInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInView.swift; sourceTree = "<group>"; };
+		6569144A2CA6998700B603A7 /* EmailInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailInputView.swift; sourceTree = "<group>"; };
+		6569144D2CA69B0800B603A7 /* Extension + UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension + UIColor.swift"; sourceTree = "<group>"; };
+		6569144F2CA6A65D00B603A7 /* FindEmployeeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindEmployeeView.swift; sourceTree = "<group>"; };
+		656914532CA7040000B603A7 /* ConformationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConformationViewModel.swift; sourceTree = "<group>"; };
+		656914552CA704B600B603A7 /* ConformationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConformationView.swift; sourceTree = "<group>"; };
+		656914582CBD520100B603A7 /* ConformationTF.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConformationTF.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,8 +68,10 @@
 		6569142C2CA5E7F800B603A7 /* hh_clone */ = {
 			isa = PBXGroup;
 			children = (
-				656914422CA5E85B00B603A7 /* Supporting Files */,
 				656914412CA5E83F00B603A7 /* Application */,
+				656914512CA703B400B603A7 /* Modules */,
+				6569144C2CA69AE300B603A7 /* Extension */,
+				656914422CA5E85B00B603A7 /* Supporting Files */,
 			);
 			path = hh_clone;
 			sourceTree = "<group>";
@@ -75,6 +93,68 @@
 				6569143B2CA5E7FA00B603A7 /* Info.plist */,
 			);
 			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		656914432CA697CC00B603A7 /* LogIn */ = {
+			isa = PBXGroup;
+			children = (
+				656914482CA6995F00B603A7 /* View */,
+				656914442CA6991000B603A7 /* LogInViewModel.swift */,
+			);
+			path = LogIn;
+			sourceTree = "<group>";
+		};
+		656914482CA6995F00B603A7 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				656914492CA6996800B603A7 /* UIComponents */,
+				656914462CA6995100B603A7 /* LogInView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		656914492CA6996800B603A7 /* UIComponents */ = {
+			isa = PBXGroup;
+			children = (
+				6569144A2CA6998700B603A7 /* EmailInputView.swift */,
+				6569144F2CA6A65D00B603A7 /* FindEmployeeView.swift */,
+			);
+			path = UIComponents;
+			sourceTree = "<group>";
+		};
+		6569144C2CA69AE300B603A7 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				6569144D2CA69B0800B603A7 /* Extension + UIColor.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		656914512CA703B400B603A7 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				656914432CA697CC00B603A7 /* LogIn */,
+				656914522CA703CE00B603A7 /* Conformation */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		656914522CA703CE00B603A7 /* Conformation */ = {
+			isa = PBXGroup;
+			children = (
+				656914572CBD51E800B603A7 /* View */,
+				656914532CA7040000B603A7 /* ConformationViewModel.swift */,
+			);
+			path = Conformation;
+			sourceTree = "<group>";
+		};
+		656914572CBD51E800B603A7 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				656914552CA704B600B603A7 /* ConformationView.swift */,
+				656914582CBD520100B603A7 /* ConformationTF.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -147,8 +227,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				656914592CBD520100B603A7 /* ConformationTF.swift in Sources */,
+				6569144B2CA6998700B603A7 /* EmailInputView.swift in Sources */,
+				656914542CA7040000B603A7 /* ConformationViewModel.swift in Sources */,
+				656914502CA6A65D00B603A7 /* FindEmployeeView.swift in Sources */,
 				6569142E2CA5E7F800B603A7 /* AppDelegate.swift in Sources */,
+				656914452CA6991000B603A7 /* LogInViewModel.swift in Sources */,
+				656914562CA704B600B603A7 /* ConformationView.swift in Sources */,
+				656914472CA6995100B603A7 /* LogInView.swift in Sources */,
 				656914302CA5E7F800B603A7 /* SceneDelegate.swift in Sources */,
+				6569144E2CA69B0800B603A7 /* Extension + UIColor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,7 +385,6 @@
 				INFOPLIST_FILE = "hh_clone/Supporting Files/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -325,7 +412,6 @@
 				INFOPLIST_FILE = "hh_clone/Supporting Files/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
