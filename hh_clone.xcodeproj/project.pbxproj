@@ -19,6 +19,10 @@
 		656914542CA7040000B603A7 /* ConformationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 656914532CA7040000B603A7 /* ConformationViewModel.swift */; };
 		656914562CA704B600B603A7 /* ConformationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 656914552CA704B600B603A7 /* ConformationView.swift */; };
 		656914592CBD520100B603A7 /* ConformationTF.swift in Sources */ = {isa = PBXBuildFile; fileRef = 656914582CBD520100B603A7 /* ConformationTF.swift */; };
+		6569145C2CBE7A7800B603A7 /* DataParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6569145B2CBE7A7800B603A7 /* DataParser.swift */; };
+		6569145E2CBE7A9B00B603A7 /* json.json in Resources */ = {isa = PBXBuildFile; fileRef = 6569145D2CBE7A9B00B603A7 /* json.json */; };
+		656914612CBE7C7E00B603A7 /* Vacancy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 656914602CBE7C7E00B603A7 /* Vacancy.swift */; };
+		656914632CBE7E8A00B603A7 /* Offers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 656914622CBE7E8A00B603A7 /* Offers.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +40,10 @@
 		656914532CA7040000B603A7 /* ConformationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConformationViewModel.swift; sourceTree = "<group>"; };
 		656914552CA704B600B603A7 /* ConformationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConformationView.swift; sourceTree = "<group>"; };
 		656914582CBD520100B603A7 /* ConformationTF.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConformationTF.swift; sourceTree = "<group>"; };
+		6569145B2CBE7A7800B603A7 /* DataParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataParser.swift; sourceTree = "<group>"; };
+		6569145D2CBE7A9B00B603A7 /* json.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = json.json; path = ../../../../Desktop/hh_clone/hh_clone/Data/json.json; sourceTree = "<group>"; };
+		656914602CBE7C7E00B603A7 /* Vacancy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vacancy.swift; sourceTree = "<group>"; };
+		656914622CBE7E8A00B603A7 /* Offers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Offers.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,8 +76,10 @@
 		6569142C2CA5E7F800B603A7 /* hh_clone */ = {
 			isa = PBXGroup;
 			children = (
+				6569145F2CBE7C5E00B603A7 /* Model */,
 				656914412CA5E83F00B603A7 /* Application */,
 				656914512CA703B400B603A7 /* Modules */,
+				6569145A2CBD689E00B603A7 /* Services */,
 				6569144C2CA69AE300B603A7 /* Extension */,
 				656914422CA5E85B00B603A7 /* Supporting Files */,
 			);
@@ -88,6 +98,7 @@
 		656914422CA5E85B00B603A7 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				6569145D2CBE7A9B00B603A7 /* json.json */,
 				656914362CA5E7FA00B603A7 /* Assets.xcassets */,
 				656914382CA5E7FA00B603A7 /* LaunchScreen.storyboard */,
 				6569143B2CA5E7FA00B603A7 /* Info.plist */,
@@ -157,6 +168,23 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		6569145A2CBD689E00B603A7 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				6569145B2CBE7A7800B603A7 /* DataParser.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		6569145F2CBE7C5E00B603A7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				656914602CBE7C7E00B603A7 /* Vacancy.swift */,
+				656914622CBE7E8A00B603A7 /* Offers.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -215,6 +243,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6569145E2CBE7A9B00B603A7 /* json.json in Resources */,
 				656914372CA5E7FA00B603A7 /* Assets.xcassets in Resources */,
 				6569143A2CA5E7FA00B603A7 /* Base in Resources */,
 			);
@@ -229,8 +258,11 @@
 			files = (
 				656914592CBD520100B603A7 /* ConformationTF.swift in Sources */,
 				6569144B2CA6998700B603A7 /* EmailInputView.swift in Sources */,
+				656914632CBE7E8A00B603A7 /* Offers.swift in Sources */,
+				6569145C2CBE7A7800B603A7 /* DataParser.swift in Sources */,
 				656914542CA7040000B603A7 /* ConformationViewModel.swift in Sources */,
 				656914502CA6A65D00B603A7 /* FindEmployeeView.swift in Sources */,
+				656914612CBE7C7E00B603A7 /* Vacancy.swift in Sources */,
 				6569142E2CA5E7F800B603A7 /* AppDelegate.swift in Sources */,
 				656914452CA6991000B603A7 /* LogInViewModel.swift in Sources */,
 				656914562CA704B600B603A7 /* ConformationView.swift in Sources */,
