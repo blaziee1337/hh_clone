@@ -9,9 +9,9 @@ import Foundation
 
 final class DataParser {
     
-    func fetchOffers() {
-        guard let jsonFilePath = Bundle.main.path(forResource: "data", ofType: "json") else {
-            print("Failed to locate JSON file")
+    func fetchVacancies(completion: @escaping (Result<[Vacancy], Error>) -> Void) {
+        guard let jsonFilePath = Bundle.main.path(forResource: "vacancies", ofType: "json") else {
+            print("Failed to locate vacancies JSON file")
             return
         }
         
@@ -19,15 +19,16 @@ final class DataParser {
         do {
             let data = try Data(contentsOf: fileURL)
             let decoder = JSONDecoder()
-            let vacancies = try decoder.decode(Offers.self, from: data)
+            let vacancies = try decoder.decode([Vacancy].self, from: data)
+            completion(.success(vacancies))
         } catch {
-            print(error.localizedDescription)
+            completion(.failure(error))
         }
     }
     
-    func fetchVacancies() {
-        guard let jsonFilePath = Bundle.main.path(forResource: "data", ofType: "json") else {
-            print("Failed to locate JSON file")
+    func fetchOffers(completion: @escaping (Result<[Offers], Error>) -> Void) {
+        guard let jsonFilePath = Bundle.main.path(forResource: "offers", ofType: "json") else {
+            print("Failed to locate offers JSON file")
             return
         }
         
@@ -35,11 +36,10 @@ final class DataParser {
         do {
             let data = try Data(contentsOf: fileURL)
             let decoder = JSONDecoder()
-            let vacancies = try decoder.decode(Vacancy.self, from: data)
+            let offers = try decoder.decode([Offers].self, from: data)
+            completion(.success(offers))
         } catch {
-            print(error.localizedDescription)
+            completion(.failure(error))
         }
-        
     }
-    
 }
