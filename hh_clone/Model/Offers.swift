@@ -7,10 +7,15 @@
 
 import Foundation
 
-struct Offers: Codable {
+struct Offers: Decodable {
     let offers: [RecommendModel]
 }
 
-struct RecommendModel: Codable {
+struct RecommendModel: Decodable {
     let title: String
+    let button: Button?
+}
+
+struct Button: Decodable {
+    let text: String
 }
