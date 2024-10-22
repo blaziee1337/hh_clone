@@ -12,6 +12,7 @@ struct Vacancy: Decodable {
 }
 
 struct VacancyModel: Decodable {
+    let id: String
     let lookingNumber: Int?
     let title: String
     let address: VacancyAddress
