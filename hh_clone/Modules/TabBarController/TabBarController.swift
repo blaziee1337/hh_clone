@@ -17,7 +17,8 @@ final class TabBarController: UITabBarController {
     
     private func setupTabs() {
         let dataParser = DataParser()
-        let viewModel = VacanciesViewModel(dataParser: dataParser)
+        let coreDataManager = CoreDataManager()
+        let viewModel = VacanciesViewModel(dataParser: dataParser, coreDataManager: coreDataManager)
         let searchVc = createNav(title: "Поиск", image: UIImage(named: "search"), vc: VacanciesView(viewModel: viewModel))
         let favoriteVc = createNav(title: "Избранное", image: UIImage(named: "favouritesfalse"), vc: FavoriteVacanciesView())
         let responsesVc = createNav(title: "Отклики", image: UIImage(named: "emailIcon"), vc: ResponsesView())
