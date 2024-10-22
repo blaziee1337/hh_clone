@@ -10,9 +10,8 @@ import UIKit
 final class VacanciesView: UIViewController {
     var viewModel: VacanciesViewModel
     
-    init(viewModel: VacanciesViewModel, height: NSLayoutConstraint) {
+    init(viewModel: VacanciesViewModel) {
         self.viewModel = viewModel
-        self.tableViewHeight = height
         super.init(nibName: nil, bundle: nil)
         
     }
