@@ -38,7 +38,8 @@ struct VacancyExperience: Decodable {
 }
 
 struct VacancySalary: Decodable {
-    let full: String
+    let short: String?
+    let full: String?
 }
 
 
