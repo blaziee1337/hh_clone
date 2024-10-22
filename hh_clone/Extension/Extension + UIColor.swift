@@ -16,4 +16,5 @@ struct ColorTheme {
     let loginInputTF = UIColor(named: "loginInputTF")
     let continueButton = UIColor(named: "continueButton")
     let findEmployeeButton = UIColor(named: "findEmployeeButton")
+    let numberOfVacancyViewedBackground = UIColor(named: "numberOfVacancy")
 }
