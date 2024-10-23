@@ -179,7 +179,7 @@ final class VacanciesView: UIViewController {
             searchTF.trailingAnchor.constraint(equalTo: filterButton.leadingAnchor, constant: -8),
             searchTF.heightAnchor.constraint(equalToConstant: 40),
             
-            filterButton.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 16),
+            filterButton.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 8),
             filterButton.leadingAnchor.constraint(equalTo: searchTF.trailingAnchor, constant: 8),
             filterButton.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -16),
             filterButton.heightAnchor.constraint(equalToConstant: 40),
