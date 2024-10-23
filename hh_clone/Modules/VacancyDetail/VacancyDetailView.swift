@@ -141,6 +141,7 @@ final class VacancyDetailView: UIViewController {
         setupConstraints()
         configure()
         setupNavigationBar()
+    
     }
     
     private var vacancyAdressInfoWithNumberViewConstraint: NSLayoutConstraint?
@@ -167,10 +168,9 @@ final class VacancyDetailView: UIViewController {
     private func setupNavigationBar() {
         navigationController?.setNavigationBarHidden(false, animated: true)
         navigationController?.navigationBar.isHidden = false
-        
-        let eyeButton = UIButton(frame: CGRect(x: 0, y: 0, width: 30, height: 30))
-        let moreButton = UIButton(frame: CGRect(x: 0, y: 0, width: 30, height: 30))
-        let isFavouriteButton = UIButton(frame: CGRect(x: 0, y: 0, width: 30, height: 30))
+        let eyeButton = UIButton(frame: CGRect(x: 0, y: 0, width: 0, height: 0))
+        let moreButton = UIButton(frame: CGRect(x: 0, y: 0, width: 0, height: 0))
+        let isFavouriteButton = UIButton(frame: CGRect(x: 0, y: 0, width: 0, height: 0))
         
         eyeButton.setImage(UIImage(named: "eyeImage"), for: .normal)
         moreButton.setImage(UIImage(named: "moreImage"), for: .normal)
@@ -188,18 +188,18 @@ final class VacancyDetailView: UIViewController {
         
         let backButton = UIButton(type: .custom)
         backButton.setImage(UIImage(named: "backButtonImage"), for: .normal)
-        backButton.frame = CGRect(x: 0, y: 0, width: 30, height: 30)
+        backButton.frame = CGRect(x: 0, y: 0, width: 0, height: 0)
         backButton.addTarget(self, action: #selector(backButtonTapped), for: .touchUpInside)
         
         navigationItem.leftBarButtonItem = UIBarButtonItem(customView: backButton)
         
         let standardAppearance = UINavigationBarAppearance()
-        standardAppearance.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
         standardAppearance.configureWithOpaqueBackground()
-        standardAppearance.backgroundColor = UIColor.black
-        
+        standardAppearance.backgroundColor = .black
+        standardAppearance.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
         navigationController?.navigationBar.standardAppearance = standardAppearance
         navigationController?.navigationBar.scrollEdgeAppearance = standardAppearance
+
     }
 
     @objc private func backButtonTapped() {
@@ -315,7 +315,7 @@ final class VacancyDetailView: UIViewController {
             button.titleLabel?.font = .systemFont(ofSize: 14)
             button.titleLabel?.numberOfLines = 0
             button.contentEdgeInsets = UIEdgeInsets(top: 8, left: 12, bottom: 8, right: 12)
-//
+
             contentView.addSubview(button)
             questionButtons.append(button)
             NSLayoutConstraint.activate([

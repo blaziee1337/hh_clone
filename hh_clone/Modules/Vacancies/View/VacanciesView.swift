@@ -125,15 +125,10 @@ final class VacanciesView: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        setupNavigationBar()
+       
     }
     
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        DispatchQueue.main.async {
-            self.vacanciesTableView.reloadData()
-            
-        }
-    }
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         changeTableViewHeight()
@@ -154,13 +149,14 @@ final class VacanciesView: UIViewController {
         vacanciesTableView.delegate = self
         vacanciesTableView.dataSource = self
     }
+    
     private func setupNavigationBar() {
         navigationController?.setNavigationBarHidden(false, animated: true)
         navigationController?.navigationBar.isHidden = true
-        
-        if let statusBar = UIApplication.shared.statusBarUIView {
+       
+         if let statusBar = UIApplication.shared.statusBarUIView {
             statusBar.backgroundColor = .black
-        }
+         }
     }
     private func setupConstraints() {
         tableViewHeight = vacanciesTableView.heightAnchor.constraint(equalToConstant: 0)
@@ -278,8 +274,7 @@ extension VacanciesView: UITableViewDelegate, UITableViewDataSource {
         }
         
         guard let vacancies = viewModel.vacancies.first?.vacancies[indexPath.row] else { return cell }
-        cell.configure(cell: vacancies)
-        //cell.backgroundColor = UIColor(red: 34/255, green: 35/255, blue: 37/255, alpha: 1)
+        cell.configure(cell: vacancies, viewModel: viewModel)
         cell.backgroundColor = .black
         return cell
     }
