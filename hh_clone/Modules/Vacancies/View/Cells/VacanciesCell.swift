@@ -6,10 +6,13 @@
 //
 
 import UIKit
+import CoreData
 
 final class VacanciesCell: UITableViewCell {
     static let identifier = "VacanciesCell"
-    
+    private var viewModel: VacanciesViewModel?
+    private var currentVacancy: VacancyModel?
+    private var favoriteVacancy: FavoriteVacancy?
     //MARK: - UI
     
     private let containerView: UIView = {
@@ -92,7 +95,7 @@ final class VacanciesCell: UITableViewCell {
     }()
     
     private let publishedDateLabel: UILabel = {
-       let label = UILabel()
+        let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.font = .systemFont(ofSize: 14)
         label.textColor = .gray
@@ -114,8 +117,11 @@ final class VacanciesCell: UITableViewCell {
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
+        self.selectionStyle = .none
         setupUI()
         setupConstraints()
+        addToFavorite.addTarget(self, action: #selector(addFavoriteTapped), for: .touchUpInside)
+        contentView.isUserInteractionEnabled = false
     }
     
     required init?(coder: NSCoder) {
@@ -135,6 +141,7 @@ final class VacanciesCell: UITableViewCell {
         containerView.addSubview(experienceLabel)
         containerView.addSubview(publishedDateLabel)
         containerView.addSubview(respondButton)
+        
     }
     
     private func setupConstraints() {
@@ -180,11 +187,15 @@ final class VacanciesCell: UITableViewCell {
             respondButton.leadingAnchor.constraint(equalTo: containerView.leadingAnchor, constant: 16),
             respondButton.trailingAnchor.constraint(equalTo: containerView.trailingAnchor, constant: -16),
             respondButton.bottomAnchor.constraint(equalTo: containerView.bottomAnchor, constant: -16)
-            ])
+        ])
         
     }
     
-     func configure(cell: VacancyModel) {
+    func configure(cell: VacancyModel, viewModel: VacanciesViewModel) {
+        
+        self.currentVacancy = cell
+        self.viewModel = viewModel
+        
         guard let number = cell.lookingNumber else {
             lookingNumberLabel.isHidden = false
             return
@@ -212,11 +223,63 @@ final class VacanciesCell: UITableViewCell {
         
         if cell.publishedDate != "" {
             publishedDateLabel.text = "Опубликовано \(formattedDate)"
-
+            
         } else {
             publishedDateLabel.text = cell.publishedDate
         }
-
         
+        updateFavoriteButtonImage()
+    }
+    func configureFavorite(cell: FavoriteVacancy, viewModel: VacanciesViewModel) {
+        self.viewModel = viewModel
+        self.favoriteVacancy = cell
+        let number = cell.lookingNumber
+        switch number {
+        case 2, 3, 4:
+            lookingNumberLabel.text = "Сейчас просматривает \(number) человека"
+        default:
+            lookingNumberLabel.text = "Сейчас просматривает \(number) человек"
+        }
+        
+        vacancyNameLabel.text = cell.vacancyName
+        salaryLabel.text = cell.vacancySalary
+        townLabel.text = cell.vacancyCity
+        companyLabel.text = cell.vacancyCompany
+        experienceLabel.text = cell.vacancyExperience
+        
+        let inputFormatter = DateFormatter()
+        inputFormatter.dateFormat = "yyyy-MM-dd"
+        let outputFormatter = DateFormatter()
+        outputFormatter.dateFormat = "d MMMM"
+        outputFormatter.locale = Locale(identifier: "ru_RU")
+        let date = inputFormatter.date(from: cell.vacancyPublishedDate ?? "")
+        let formattedDate = outputFormatter.string(from: date ?? Date())
+        
+        if cell.vacancyPublishedDate != "" {
+            publishedDateLabel.text = "Опубликовано \(formattedDate)"
+            
+        } else {
+            publishedDateLabel.text = cell.vacancyPublishedDate
+        }
+        
+        updateFavoriteButtonImage()
+    }
+    
+    private func updateFavoriteButtonImage() {
+        if let vacancyId = currentVacancy?.id ?? favoriteVacancy?.id, viewModel?.isFavorite(id: vacancyId) == true {
+            addToFavorite.setImage(UIImage(named: "favouritetrue"), for: .normal)
+        } else {
+            addToFavorite.setImage(UIImage(named: "favouritesfalse"), for: .normal)
+        }
+    }
+    
+    @objc private func addFavoriteTapped() {
+        guard let vacancy = currentVacancy else { return }
+        
+        viewModel?.toggleFavoriteStatus(for: vacancy)
+        
+        let isFavoriteNow = viewModel?.isFavorite(id: vacancy.id) ?? false
+        let newImageName = isFavoriteNow ? "favouritetrue" : "favouritesfalse"
+        addToFavorite.setImage(UIImage(named: newImageName), for: .normal)
     }
 }
