@@ -23,6 +23,22 @@
 		6569145E2CBE7A9B00B603A7 /* json.json in Resources */ = {isa = PBXBuildFile; fileRef = 6569145D2CBE7A9B00B603A7 /* json.json */; };
 		656914612CBE7C7E00B603A7 /* Vacancy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 656914602CBE7C7E00B603A7 /* Vacancy.swift */; };
 		656914632CBE7E8A00B603A7 /* Offers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 656914622CBE7E8A00B603A7 /* Offers.swift */; };
+		656914662CBE825300B603A7 /* VacanciesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 656914652CBE825300B603A7 /* VacanciesView.swift */; };
+		656914682CBE826800B603A7 /* VacanciesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 656914672CBE826800B603A7 /* VacanciesViewModel.swift */; };
+		6569146C2CBFFD8400B603A7 /* RecommendationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6569146B2CBFFD8400B603A7 /* RecommendationCell.swift */; };
+		6569146F2CC27F3800B603A7 /* VacanciesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6569146E2CC27F3800B603A7 /* VacanciesCell.swift */; };
+		656914722CC5932400B603A7 /* VacancyDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 656914712CC5932400B603A7 /* VacancyDetailView.swift */; };
+		656914752CC5988A00B603A7 /* NumberOfVacancyViewedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 656914742CC5988A00B603A7 /* NumberOfVacancyViewedView.swift */; };
+		656914772CC5A3B800B603A7 /* VacancyAdressInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 656914762CC5A3B800B603A7 /* VacancyAdressInfoView.swift */; };
+		6569147B2CC6979300B603A7 /* Extension + UIApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6569147A2CC6979300B603A7 /* Extension + UIApplication.swift */; };
+		6569147E2CC7BB5800B603A7 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6569147D2CC7BB5800B603A7 /* TabBarController.swift */; };
+		656914812CC7BD2C00B603A7 /* ResponsesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 656914802CC7BD2C00B603A7 /* ResponsesView.swift */; };
+		656914832CC7BD3A00B603A7 /* MessagesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 656914822CC7BD3A00B603A7 /* MessagesView.swift */; };
+		656914852CC7BD4800B603A7 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 656914842CC7BD4800B603A7 /* ProfileView.swift */; };
+		656914882CC7BEA700B603A7 /* FavoriteVacanciesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 656914872CC7BEA700B603A7 /* FavoriteVacanciesView.swift */; };
+		6569148B2CC7CBB600B603A7 /* FavoriteVacancies.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 656914892CC7CBB600B603A7 /* FavoriteVacancies.xcdatamodeld */; };
+		6569148D2CC7CDA500B603A7 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6569148C2CC7CDA500B603A7 /* CoreDataManager.swift */; };
+		6569148F2CC91B4700B603A7 /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6569148E2CC91B4700B603A7 /* UserDefaults.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +60,22 @@
 		6569145D2CBE7A9B00B603A7 /* json.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = json.json; path = ../../../../Desktop/hh_clone/hh_clone/Data/json.json; sourceTree = "<group>"; };
 		656914602CBE7C7E00B603A7 /* Vacancy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vacancy.swift; sourceTree = "<group>"; };
 		656914622CBE7E8A00B603A7 /* Offers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Offers.swift; sourceTree = "<group>"; };
+		656914652CBE825300B603A7 /* VacanciesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VacanciesView.swift; sourceTree = "<group>"; };
+		656914672CBE826800B603A7 /* VacanciesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VacanciesViewModel.swift; sourceTree = "<group>"; };
+		6569146B2CBFFD8400B603A7 /* RecommendationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendationCell.swift; sourceTree = "<group>"; };
+		6569146E2CC27F3800B603A7 /* VacanciesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VacanciesCell.swift; sourceTree = "<group>"; };
+		656914712CC5932400B603A7 /* VacancyDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VacancyDetailView.swift; sourceTree = "<group>"; };
+		656914742CC5988A00B603A7 /* NumberOfVacancyViewedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberOfVacancyViewedView.swift; sourceTree = "<group>"; };
+		656914762CC5A3B800B603A7 /* VacancyAdressInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VacancyAdressInfoView.swift; sourceTree = "<group>"; };
+		6569147A2CC6979300B603A7 /* Extension + UIApplication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension + UIApplication.swift"; sourceTree = "<group>"; };
+		6569147D2CC7BB5800B603A7 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		656914802CC7BD2C00B603A7 /* ResponsesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponsesView.swift; sourceTree = "<group>"; };
+		656914822CC7BD3A00B603A7 /* MessagesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesView.swift; sourceTree = "<group>"; };
+		656914842CC7BD4800B603A7 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		656914872CC7BEA700B603A7 /* FavoriteVacanciesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteVacanciesView.swift; sourceTree = "<group>"; };
+		6569148A2CC7CBB600B603A7 /* FavoriteVacancies.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FavoriteVacancies.xcdatamodel; sourceTree = "<group>"; };
+		6569148C2CC7CDA500B603A7 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		6569148E2CC91B4700B603A7 /* UserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaults.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +134,7 @@
 				656914362CA5E7FA00B603A7 /* Assets.xcassets */,
 				656914382CA5E7FA00B603A7 /* LaunchScreen.storyboard */,
 				6569143B2CA5E7FA00B603A7 /* Info.plist */,
+				656914892CC7CBB600B603A7 /* FavoriteVacancies.xcdatamodeld */,
 			);
 			path = "Supporting Files";
 			sourceTree = "<group>";
@@ -137,6 +170,7 @@
 			isa = PBXGroup;
 			children = (
 				6569144D2CA69B0800B603A7 /* Extension + UIColor.swift */,
+				6569147A2CC6979300B603A7 /* Extension + UIApplication.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -144,8 +178,12 @@
 		656914512CA703B400B603A7 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				6569147C2CC7BB2000B603A7 /* TabBarController */,
 				656914432CA697CC00B603A7 /* LogIn */,
 				656914522CA703CE00B603A7 /* Conformation */,
+				656914642CBE815100B603A7 /* Vacancies */,
+				656914702CC592EA00B603A7 /* VacancyDetail */,
+				656914862CC7BE5000B603A7 /* FavoriteVacancies */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -172,6 +210,8 @@
 			isa = PBXGroup;
 			children = (
 				6569145B2CBE7A7800B603A7 /* DataParser.swift */,
+				6569148C2CC7CDA500B603A7 /* CoreDataManager.swift */,
+				6569148E2CC91B4700B603A7 /* UserDefaults.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -183,6 +223,78 @@
 				656914622CBE7E8A00B603A7 /* Offers.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		656914642CBE815100B603A7 /* Vacancies */ = {
+			isa = PBXGroup;
+			children = (
+				656914692CBFFC1C00B603A7 /* View */,
+				656914672CBE826800B603A7 /* VacanciesViewModel.swift */,
+			);
+			path = Vacancies;
+			sourceTree = "<group>";
+		};
+		656914692CBFFC1C00B603A7 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				6569146A2CBFFD0800B603A7 /* Cells */,
+				656914652CBE825300B603A7 /* VacanciesView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		6569146A2CBFFD0800B603A7 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				6569146B2CBFFD8400B603A7 /* RecommendationCell.swift */,
+				6569146E2CC27F3800B603A7 /* VacanciesCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		656914702CC592EA00B603A7 /* VacancyDetail */ = {
+			isa = PBXGroup;
+			children = (
+				656914732CC594D000B603A7 /* UIComponents */,
+				656914712CC5932400B603A7 /* VacancyDetailView.swift */,
+			);
+			path = VacancyDetail;
+			sourceTree = "<group>";
+		};
+		656914732CC594D000B603A7 /* UIComponents */ = {
+			isa = PBXGroup;
+			children = (
+				656914742CC5988A00B603A7 /* NumberOfVacancyViewedView.swift */,
+				656914762CC5A3B800B603A7 /* VacancyAdressInfoView.swift */,
+			);
+			path = UIComponents;
+			sourceTree = "<group>";
+		};
+		6569147C2CC7BB2000B603A7 /* TabBarController */ = {
+			isa = PBXGroup;
+			children = (
+				6569147F2CC7BD0B00B603A7 /* MockViews */,
+				6569147D2CC7BB5800B603A7 /* TabBarController.swift */,
+			);
+			path = TabBarController;
+			sourceTree = "<group>";
+		};
+		6569147F2CC7BD0B00B603A7 /* MockViews */ = {
+			isa = PBXGroup;
+			children = (
+				656914802CC7BD2C00B603A7 /* ResponsesView.swift */,
+				656914822CC7BD3A00B603A7 /* MessagesView.swift */,
+				656914842CC7BD4800B603A7 /* ProfileView.swift */,
+			);
+			path = MockViews;
+			sourceTree = "<group>";
+		};
+		656914862CC7BE5000B603A7 /* FavoriteVacancies */ = {
+			isa = PBXGroup;
+			children = (
+				656914872CC7BEA700B603A7 /* FavoriteVacanciesView.swift */,
+			);
+			path = FavoriteVacancies;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -256,18 +368,34 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6569148F2CC91B4700B603A7 /* UserDefaults.swift in Sources */,
 				656914592CBD520100B603A7 /* ConformationTF.swift in Sources */,
+				6569148B2CC7CBB600B603A7 /* FavoriteVacancies.xcdatamodeld in Sources */,
 				6569144B2CA6998700B603A7 /* EmailInputView.swift in Sources */,
 				656914632CBE7E8A00B603A7 /* Offers.swift in Sources */,
 				6569145C2CBE7A7800B603A7 /* DataParser.swift in Sources */,
 				656914542CA7040000B603A7 /* ConformationViewModel.swift in Sources */,
 				656914502CA6A65D00B603A7 /* FindEmployeeView.swift in Sources */,
 				656914612CBE7C7E00B603A7 /* Vacancy.swift in Sources */,
+				656914852CC7BD4800B603A7 /* ProfileView.swift in Sources */,
+				656914722CC5932400B603A7 /* VacancyDetailView.swift in Sources */,
+				656914832CC7BD3A00B603A7 /* MessagesView.swift in Sources */,
+				656914772CC5A3B800B603A7 /* VacancyAdressInfoView.swift in Sources */,
 				6569142E2CA5E7F800B603A7 /* AppDelegate.swift in Sources */,
+				6569146C2CBFFD8400B603A7 /* RecommendationCell.swift in Sources */,
 				656914452CA6991000B603A7 /* LogInViewModel.swift in Sources */,
+				6569147B2CC6979300B603A7 /* Extension + UIApplication.swift in Sources */,
+				6569147E2CC7BB5800B603A7 /* TabBarController.swift in Sources */,
+				656914682CBE826800B603A7 /* VacanciesViewModel.swift in Sources */,
 				656914562CA704B600B603A7 /* ConformationView.swift in Sources */,
+				656914752CC5988A00B603A7 /* NumberOfVacancyViewedView.swift in Sources */,
+				656914662CBE825300B603A7 /* VacanciesView.swift in Sources */,
+				656914882CC7BEA700B603A7 /* FavoriteVacanciesView.swift in Sources */,
+				6569146F2CC27F3800B603A7 /* VacanciesCell.swift in Sources */,
 				656914472CA6995100B603A7 /* LogInView.swift in Sources */,
 				656914302CA5E7F800B603A7 /* SceneDelegate.swift in Sources */,
+				656914812CC7BD2C00B603A7 /* ResponsesView.swift in Sources */,
+				6569148D2CC7CDA500B603A7 /* CoreDataManager.swift in Sources */,
 				6569144E2CA69B0800B603A7 /* Extension + UIColor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -481,6 +609,20 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		656914892CC7CBB600B603A7 /* FavoriteVacancies.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				6569148A2CC7CBB600B603A7 /* FavoriteVacancies.xcdatamodel */,
+			);
+			currentVersion = 6569148A2CC7CBB600B603A7 /* FavoriteVacancies.xcdatamodel */;
+			name = FavoriteVacancies.xcdatamodeld;
+			path = "/Users/blaziee/Documents/hh_clone/hh_clone/Supporting Files/FavoriteVacancies.xcdatamodeld";
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 656914222CA5E7F800B603A7 /* Project object */;
 }

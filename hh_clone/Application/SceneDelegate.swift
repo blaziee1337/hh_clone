@@ -19,10 +19,19 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = scene as? UIWindowScene else { return }
         
         window = UIWindow(windowScene: windowScene)
-        let mainView = TabBarController()
-        let navigationController = UINavigationController(rootViewController: mainView)
         
-        window?.rootViewController = navigationController
+        if IsLoginFlag.shared.isLogin {
+            let mainView = TabBarController()
+            let navigationController = UINavigationController(rootViewController: mainView)
+            navigationController.setNavigationBarHidden(true, animated: true)
+            window?.rootViewController = navigationController
+        } else {
+            let loginViewController = LogInView() 
+            let navigationController = UINavigationController(rootViewController: loginViewController)
+            navigationController.setNavigationBarHidden(true, animated: true)
+            window?.rootViewController = navigationController
+        }
+        
         window?.makeKeyAndVisible()
     }
 

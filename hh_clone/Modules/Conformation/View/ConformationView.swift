@@ -90,6 +90,8 @@ final class ConformationView: UIViewController {
         view.addSubview(emailCode)
         view.addSubview(writeCodeLabel)
         view.addSubview(confirmButton)
+        
+        confirmButton.addTarget(self, action: #selector(confirmButtonTapped), for: .touchUpInside)
     }
     
     private func setupTextFields() {
@@ -193,6 +195,13 @@ extension ConformationView: UITextFieldDelegate {
                 deactivateConfirmButton()
             }
             return true
+        }
+    }
+    
+    @objc func confirmButtonTapped() {
+        if viewModel.isCodeComplete() {
+            IsLoginFlag.shared.isLogin = true
+            navigationController?.pushViewController(TabBarController(), animated: true)
         }
     }
 }
