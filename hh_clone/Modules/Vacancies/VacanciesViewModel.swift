@@ -11,11 +11,11 @@ final class VacanciesViewModel {
     
     var vacancies: [Vacancy] = []
     var offers: [Offers] = []
-    var onDataUpdated: (() -> Void)?
     private let dataParser: DataParser
-    
-    init(dataParser: DataParser) {
+    let coreDataManager: CoreDataManager
+    init(dataParser: DataParser, coreDataManager: CoreDataManager) {
         self.dataParser = dataParser
+        self.coreDataManager = coreDataManager
         fetchData()
     }
     
@@ -24,7 +24,6 @@ final class VacanciesViewModel {
             switch result {
             case .success(let vacancies):
                 self?.vacancies = [vacancies]
-                self?.onDataUpdated?()
             case .failure(let error):
                 print(String(describing: error))
             }
@@ -34,10 +33,29 @@ final class VacanciesViewModel {
             switch result {
             case .success(let offers):
                 self?.offers = [offers]
-                self?.onDataUpdated?()
             case .failure(let error):
                 print(String(describing: error))
             }
         }
     }
+    
+    // Сохранение в избранное
+    func toggleFavoriteStatus(for vacancy: VacancyModel) {
+        let vacancyId = vacancy.id  // Получаем id вакансии
+        
+        if coreDataManager.isVacancyFavorite(id: vacancyId) {
+            coreDataManager.deleteFavoriteVacancies(vacancies: vacancy)
+
+        } else {
+            coreDataManager.saveVacancies(vacancies: vacancy)
+            
+        }
+    }
+    
+    // Проверка, является ли вакансия избранной
+    func isFavorite(id: String) -> Bool {
+        let isFavorite = coreDataManager.isVacancyFavorite(id: id)
+        return isFavorite
+    }
+    
 }
