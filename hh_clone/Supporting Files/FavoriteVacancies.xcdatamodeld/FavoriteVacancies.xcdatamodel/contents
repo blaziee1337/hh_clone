@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="22758" systemVersion="23F79" minimumToolsVersion="Automatic" sourceLanguage="Swift" usedWithSwiftData="YES" userDefinedModelVersionIdentifier="">
+    <entity name="FavoriteVacancy" representedClassName="FavoriteVacancy" syncable="YES" codeGenerationType="class">
+        <attribute name="id" optional="YES" attributeType="String"/>
+        <attribute name="lookingNumber" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="vacancyCity" optional="YES" attributeType="String"/>
+        <attribute name="vacancyCompany" optional="YES" attributeType="String"/>
+        <attribute name="vacancyExperience" optional="YES" attributeType="String"/>
+        <attribute name="vacancyName" optional="YES" attributeType="String"/>
+        <attribute name="vacancyPublishedDate" optional="YES" attributeType="String"/>
+        <attribute name="vacancySalary" optional="YES" attributeType="String"/>
+    </entity>
+</model>
