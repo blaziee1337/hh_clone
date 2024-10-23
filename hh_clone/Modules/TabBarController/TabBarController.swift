@@ -20,7 +20,7 @@ final class TabBarController: UITabBarController {
         let coreDataManager = CoreDataManager()
         let viewModel = VacanciesViewModel(dataParser: dataParser, coreDataManager: coreDataManager)
         let searchVc = createNav(title: "Поиск", image: UIImage(named: "search"), vc: VacanciesView(viewModel: viewModel))
-        let favoriteVc = createNav(title: "Избранное", image: UIImage(named: "favouritesfalse"), vc: FavoriteVacanciesView())
+        let favoriteVc = createNav(title: "Избранное", image: UIImage(named: "favouritesfalse"), vc: FavoriteVacanciesView(viewModel: viewModel))
         let responsesVc = createNav(title: "Отклики", image: UIImage(named: "emailIcon"), vc: ResponsesView())
         let messagesVc = createNav(title: "Сообщения", image: UIImage(named: "message"), vc: MessagesView())
         let profileVc = createNav(title: "Профиль", image: UIImage(named: "profile"), vc: ProfileView())
